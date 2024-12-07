@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - astropy >=5,<6
+    - astropy-base >=5,<6
     - filelock >=3,<4
     - frictionless >=5.10.1,<6
     - matplotlib-base >=3.5.0,<4
