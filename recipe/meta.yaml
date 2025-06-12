@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - astropy-base >=5,<7
+    - astropy-base >=5,<8
     - filelock >=3,<4
     - frictionless >=5.8.3,<6
     - iteration_utilities >=0.13.0,<0.14.0
