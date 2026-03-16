@@ -1,5 +1,5 @@
 {% set name = "unitpackage" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/unitpackage-{{ version }}.tar.gz
-  sha256: df7989f1248171d4bdc206626262df22d445bfe1e84263c2fd35c110835ca7a9
+  sha256: 9852c4b13142bef558abb6543e5c12a4862db8d3a17546efa79c9e694dc63fb5
 
 build:
   noarch: python
@@ -22,9 +22,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - astropy-base >=5,<8
+    - click >=8.0,<9
     - frictionless >=5.8.3,<6
     - matplotlib-base >=3.5.0,<4
-    - pandas >=1.3,<3
+    - pandas >=1.3,<4
     - plotly >=5,<7
     - pybtex >=0.25,<0.26
 
