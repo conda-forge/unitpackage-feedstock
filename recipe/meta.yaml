@@ -1,5 +1,5 @@
 {% set name = "unitpackage" %}
-{% set version = "0.13.3" %}
+{% set version = "0.13.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/unitpackage-{{ version }}.tar.gz
-  sha256: 9beb8ced2599699c19cad0088e924e8e2e8cac33661b54edaf3889dc137f1e0e
+  sha256: d786d131aff92d8d42bdf79984c093ec1cccc20f3e840206f40cb874f0364d66
 
 build:
   noarch: python
