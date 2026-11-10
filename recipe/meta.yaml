@@ -1,13 +1,13 @@
 {% set name = "unitpackage" %}
-{% set version = "0.13.4" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/unitpackage-{{ version }}.tar.gz
-  sha256: d786d131aff92d8d42bdf79984c093ec1cccc20f3e840206f40cb874f0364d66
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/unitpackage-{{ version }}.tar.gz
+  sha256: 968a8e7be1958aa85329bae0637a3cb7411079d4f6725f95c89a6221e55278de
 
 build:
   noarch: python
@@ -18,16 +18,16 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=61.2
   run:
     - python >={{ python_min }}
-    - astropy-base >=5,<8
+    - astropy-base >=5.0.5,<9
     - click >=8.0,<9
     - frictionless >=5.8.3,<6
-    - matplotlib-base >=3.5.0,<4
-    - pandas >=1.3,<4
+    - matplotlib-base >=3.6,<4
+    - pandas >=1.5,<4
     - plotly >=5,<7
-    - pybtex >=0.25,<0.26
+    - pybtex >=0.25,<0.27
 
 test:
   imports:
